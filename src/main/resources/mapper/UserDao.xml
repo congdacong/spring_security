@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射 接口 IBookDao -->
+<mapper namespace="com.security.dao.UserDao">
+
+    <select id="findByName" resultType="com.security.config.UserDto" parameterType="String">
+       select a.password,a.user_name as userName from t_user a where user_name = 'admin'
+    </select>
+
+    <select id="findByNameAndPws" resultType="com.security.entity.User" parameterType="String">
+        select * from account where user_name = #{userName} and password = #{password}
+    </select>
+
+
+</mapper>

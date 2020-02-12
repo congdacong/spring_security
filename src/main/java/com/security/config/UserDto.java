@@ -5,6 +5,7 @@ public class UserDto {
     private String role;
     private String userName;
 
+
     public String getPassword() {
         return password;
     }

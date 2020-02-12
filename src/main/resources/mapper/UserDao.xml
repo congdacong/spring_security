@@ -15,4 +15,8 @@
     </select>
 
 
+    <select id="selectPermissionByUserName" resultType="com.security.config.RolePermissionDto" parameterType="String">
+       select distinct (t_role_permission.authority) from t_role_permission where t_role_permission.role_id in (select t_user_role.role_id from t_user_role where t_user_role.user_id = (select t_user.id from t_user where user_name = 'admin'))
+    </select>
+
 </mapper>

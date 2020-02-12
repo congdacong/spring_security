@@ -1,10 +1,11 @@
 package com.security.config;
 
-public class PermissionDto {
+public class RolePermissionDto {
     private int id;
-    private String code;
+    private String authority;
     private String description;
     private String url;
+    private int roleId;
 
     public int getId() {
         return id;
@@ -14,12 +15,12 @@ public class PermissionDto {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public String getAuthority() {
+        return authority;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setAuthority(String authority) {
+        this.authority = authority;
     }
 
     public String getDescription() {
@@ -37,4 +38,13 @@ public class PermissionDto {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
 }
